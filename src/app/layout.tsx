@@ -63,10 +63,49 @@ export const metadata: Metadata = {
     canonical: './', // O Next.js resolve para a URL base automaticamente
   }
 }
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'MANN Company',
+  url: BASE_URL,
+  logo: `${BASE_URL}/logowithback.jpg`,
+  image: `${BASE_URL}/logowithback.jpg`,
+  description: 'Agência de marketing e tecnologia especializada no setor automotivo. Estruturamos estratégias digitais, funis comerciais e soluções tecnológicas para empresas automotivas.',
+  telephone: '+55-11-99012-8590',
+  email: 'contato@manncompany.com.br',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'BR',
+    addressRegion: 'SP',
+  },
+  openingHours: 'Mo-Fr 09:00-19:00',
+  sameAs: [
+    'https://wa.me/5511990128590',
+  ],
+  serviceType: [
+    'Marketing Automotivo',
+    'Tráfego Pago',
+    'Funil de Vendas',
+    'CRM Automotivo',
+    'Produção Audiovisual',
+    'Estratégia Digital',
+  ],
+  areaServed: {
+    '@type': 'Country',
+    name: 'Brasil',
+  },
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={`${geist.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${geist.variable} ${geistMono.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
