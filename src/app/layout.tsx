@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     default: 'MANN Company — Marketing e Tecnologia Automotiva',
     template: '%s | MANN Company' 
   },
+  verification: {
+  google: 'CV1BJi-XLVMn4L-a4CS7WSnDyu5b3DQXgAeboYUv1A8', // cola aqui o código que o Google te deu
+  },
   description: 'Agência especializada no setor automotivo. Estruturamos estratégias digitais, funis comerciais e soluções tecnológicas.',
   keywords: ['marketing automotivo', 'tecnologia', 'estratégia digital', 'oficinas', 'estética automotiva'],
   
