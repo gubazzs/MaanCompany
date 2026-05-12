@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   weight: ['400', '500'],
 })
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://maan-company.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

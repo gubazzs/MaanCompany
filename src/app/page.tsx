@@ -8,7 +8,7 @@ import Tweaks from '@/components/Tweaks'
 import { Metadata } from 'next'
 
 // Defina a base URL aqui para facilitar a troca em produção
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://maan-company.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
